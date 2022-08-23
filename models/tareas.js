@@ -23,6 +23,12 @@ class Tareas {
         this._listado = {};
     }
 
+    borrarTarea (id){
+        if (this._listado[id]){
+             delete this._listado[id];
+        }
+    }
+
     traerTareasDB (tareas) {
         tareas.forEach(tarea => {
             
@@ -83,6 +89,24 @@ class Tareas {
                 
             });
         }
+    }
+
+    toggleCompletadas (ids ){
+        ids.forEach(id => {
+            const tarea = this._listado[id];
+            if (!tarea.completadoEn ){
+
+                tarea.completadoEn = new Date().toISOString(); //graba la fecha
+
+
+            }
+        });
+
+        this.listadoArr.forEach(tarea => {
+            if (!ids.includes(tarea.id)){
+                this._listado[tarea.id].completadoEn = null;
+            }
+        });
     }
 
 }
