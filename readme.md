@@ -1,4 +1,7 @@
-# Forma de uso:
+<p align="center"><img src="https://i.imgur.com/RCHk6eV.png" width="400"></p>
+#To-Do List (C.R.U.D.)
+
+## Forma de uso:
 
 *IMPORTANTE* 
 Para poder usar esta app es importante tener Node instalado de forma global en su equipo.
